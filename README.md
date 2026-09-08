@@ -27,15 +27,15 @@ Kalau dosen memperbaiki sesuatu di pertemuan yang sudah dirilis (mis. ada bug di
 Bagian di bawah ini **isi bertahap** sesuai level yang sedang kalian kerjakan (lihat `pertemuan-01/SOAL.md`) — heading-nya dicek otomatis, jangan diganti namanya.
 
 ## Identitas
-- Nama: (tulis di sini)
-- NRP: (tulis di sini)
-- Kelas: (tulis di sini)
+- Nama: Farrel Ahmad Lazuardi
+- NRP: 5053241035
+- Kelas: M
 
 ## Commit vs Push
-(tulis di sini)
+menurut saya, commit itu menentukan perubahan, lalu push itu adalah mengirim perubahan tersebut. contohnya jika tidak commit dulu sebelum push sepertinya kode tersebut akan gagal dan ditolak
 
 ## Reproducibility
-(tulis di sini)
+yang saya mengerti, versi dari golang yang berbeda jika menjalankan hanya kode teks saja bakal terasa aman, namun bermasalah jika kode program yang menganut kecocokan antar kode 
 
 ## Catatan Merge Conflict
 (tulis di sini)
