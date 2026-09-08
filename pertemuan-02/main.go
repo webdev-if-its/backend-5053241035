@@ -38,14 +38,21 @@ func TotalSetelahDiskon(qty []int, hargaSatuan []float64, tarifPajak float64) fl
 }
 
 func ValidasiPesanan(qty []int, hargaSatuan []float64) (bool, string) {
-if len(qty) != len(hargaSatuan) {}
-
-func TentukanStatus(total float64) string {
-	panic("belum diimplementasikan")
+if len(qty) != len(hargaSatuan) {
+	return false, "Jumlah item dan harga satuan tidak sesuai"
+}
+for i := 0; i < len(qty); i++ {
+	if qty[i] <= 0 {
+		return false, "jumlah barang (qty) harus lebih dari 0"
+	}
+	if hargaSatuan[i] <= 0 {
+		return false, "harga satuan harus lebih dari 0"
+}
+return true, ""
 }
 
-func RingkasanPesanan(qty []int, hargaSatuan []float64, tarifPajak float64) string {
-	panic("belum diimplementasikan")
+func TentukanStatus(total float64) string {
+
 }
 
 // TODO(Level 9): signature ini SUDAH benar (cari tahu sendiri kenapa
