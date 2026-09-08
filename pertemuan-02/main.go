@@ -52,7 +52,16 @@ return true, ""
 }
 
 func TentukanStatus(total float64) string {
+	if total >= 1000000 {
+		return "Prioritas"
+	} else if total >= 100000 { 
+		return "Reguler"
+	}
+	return "Hemat"
+}
 
+func RingkasanPesanan(qty []int, hargaSatuan []float64, tarifPajak float64) string {
+	panic("belum diimplementasikan")
 }
 
 // TODO(Level 9): signature ini SUDAH benar (cari tahu sendiri kenapa
