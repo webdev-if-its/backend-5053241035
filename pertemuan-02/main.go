@@ -10,6 +10,9 @@ return float64(qty) * hargaSatuan
 }
 
 func HitungTotalPesanan(qty []int, hargaSatuan []float64) float64 {
+	if len(qty) != len(hargaSatuan) {
+		return 0
+	}
 	var total float64
 	for i := 0; i < len(qty); i++ {
 		total += HitungSubtotal(qty[i], hargaSatuan[i])
@@ -22,9 +25,9 @@ func TerapkanPajak(total float64, tarifPajak float64) float64 {
 }
 
 func HitungDiskon(total float64) float64 {
-	if total >= 100000 {
+	if total >= 1000000 {
 		return total * 0.1 
-	} else if total >= 50000 {
+	} else if total >= 500000 {
 		return total * 0.05
 	}
 	return 0
@@ -47,14 +50,15 @@ for i := 0; i < len(qty); i++ {
 	}
 	if hargaSatuan[i] <= 0 {
 		return false, "harga satuan harus lebih dari 0"
+	}	
 }
-return true, ""
+	return true, ""
 }
 
 func TentukanStatus(total float64) string {
-	if total >= 1000000 {
+	if total > 1000000 {
 		return "Prioritas"
-	} else if total >= 100000 { 
+	} else if total > 100000 && total <= 1000000 { 
 		return "Reguler"
 	}
 	return "Hemat"
